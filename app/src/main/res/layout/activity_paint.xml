@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaintActivity">
+
+    <FrameLayout
+        android:id="@+id/frm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/btnGreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="#4CAF50"
+        android:onClick="changeColor"
+        android:padding="10dp"
+        android:tag="#4CAF50"
+        android:text="Green"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btnBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/btnGreen"
+        android:backgroundTint="#3F51B5"
+        android:onClick="changeColor"
+        android:padding="10dp"
+        android:tag="#3F51B5"
+        android:text="Blue"
+        android:textSize="20dp" />
+    <Button
+        android:id="@+id/btnRed"
+        android:tag="#F44336"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/btnBlue"
+        android:onClick="changeColor"
+        android:backgroundTint="#F44336"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:text="Red"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/btnYellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/btnRed"
+        android:backgroundTint="#FFEB3B"
+        android:onClick="changeColor"
+        android:padding="10dp"
+        android:tag="#FFEB3B"
+        android:text="Yellow"
+        android:textSize="19dp" />
+
+
+    <Button
+        android:id="@+id/btnFill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnGreen"
+        android:onClick="changeFill"
+        android:tag="Fill"
+        android:text="Fill"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnUnFill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnBlue"
+        android:layout_toRightOf="@id/btnFill"
+        android:onClick="changeFill"
+        android:tag="UnFill"
+        android:text="UnFill"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnRed"
+        android:layout_toRightOf="@id/btnUnFill"
+        android:onClick="changeWidth"
+        android:tag="More"
+        android:text="+"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnLess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnRed"
+        android:layout_toRightOf="@id/btnMore"
+        android:onClick="changeWidth"
+        android:tag="Less"
+        android:text="-"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnFill"
+        android:onClick="keepBiggest"
+        android:tag="getArea"
+        android:text="Area"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnFill"
+        android:layout_toRightOf="@id/btnArea"
+        android:onClick="saveImage"
+        android:tag="Save"
+        android:text="Save"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addLine"
+        android:text="Line"
+        android:tag="Line"
+        android:layout_alignTop="@id/btnRect"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/btnRect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/btnLine"
+        android:onClick="addRect"
+        android:tag="Rect"
+        android:text="Rect"
+        android:textSize="16sp" />
+    <Button
+        android:id="@+id/btnCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addCircle"
+        android:layout_alignTop="@id/btnRect"
+        android:layout_toRightOf="@id/btnPath"
+        android:text="Circle"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/btnPath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btnRect"
+        android:layout_toRightOf="@id/btnRect"
+        android:onClick="addPath"
+        android:text="Path"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/btnCircle"
+        android:background="@drawable/clear"
+        android:textSize="16sp" />
+</RelativeLayout>
